@@ -1,0 +1,63 @@
+<MyBoxLayout>
+    cols: 2
+    title: title
+    year: year
+    category: category
+    is_watched: is_watched
+
+    orientation: 'vertical'
+    Label:
+        id: gui_title
+        text: "Movies Program"
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "Title: "
+        TextInput:
+            id:title
+            multiline: False
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "Year: "
+        TextInput:
+            id: year
+            multiline: False
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "Category: "
+        TextInput:
+            id: category
+            multiline: False
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: "Watched: "
+        CheckBox:
+            id: is_watched
+            active: False
+
+    Button:
+        text:"add Movie"
+        on_press:root.addMovie()
+
+    Button:
+        text:"Unwatched Movies"
+        on_press:root.nUnwatchedMovies()
+
+    Button:
+        text:"Watched Movies"
+        on_press:root.nWatchedMovies()
+
+    Button:
+        text:"Save Movies"
+        on_press:root.SaveMovies()
+
+    Button:
+        text:"Sort Movies by Title"
+        on_press:root.SortTitle()
+
+    Button:
+        text:"Sort Movies by Year"
+        on_press:root.SortYear()
