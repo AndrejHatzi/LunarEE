@@ -1,0 +1,1 @@
+Scraper for **HomeDepot**, insert and ID and the scraper will automatically get the price of all HomeDepot stores.
